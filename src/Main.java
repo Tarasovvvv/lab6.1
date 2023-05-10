@@ -17,5 +17,9 @@ public class Main {
         CopySyntaxTree CST = new CopySyntaxTree();
         Expression newExpr = callAbs.transform(CST);
         System.out.println(newExpr.toString());
+
+        FoldConstants FC = new FoldConstants();
+        Expression newExpr1 = callAbs.transform(FC);
+        System.out.println(newExpr1.toString());
     }
 }
