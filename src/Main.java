@@ -13,5 +13,9 @@ public class Main {
         Variable var = new Variable("var");
         BinaryOperation mult = new BinaryOperation(var, BinaryOperation.MUL, callSqrt);
         FunctionCall callAbs = new FunctionCall("abs", mult);
+
+        CopySyntaxTree CST = new CopySyntaxTree();
+        Expression newExpr = callAbs.transform(CST);
+        System.out.println(newExpr.toString());
     }
 }
